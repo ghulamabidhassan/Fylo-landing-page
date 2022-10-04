@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
@@ -43,8 +43,9 @@
               Access them wherever you need, share and collaborate with friends,
               family, and co-workers.
             </p>
-            <div class="input-btn">
+            <div class="input-btn input-btn-header">
               <input
+                pattern="[A-Za-z.0-9_+-]+@[a-zA-Z0-9._-]+\.[a-z]{2,6}"
                 type="text"
                 class="input"
                 placeholder="Enter your email.."
@@ -55,54 +56,68 @@
         </section>
       </header>
       <section class="middle">
-        <img class="curve-mob" src="./images/bg-curve-mobile.svg" alt="" />
-        <div class="section">
-          <div class="section">
+        <img
+          class="curve-mob curve"
+          src="./images/bg-curve-mobile.svg"
+          alt=""
+        />
+        <img
+          class="curve-desktop curve"
+          src="./images/bg-curve-desktop.svg"
+          alt=""
+        />
+        <div class="sections">
+          <div class="section illus-two">
             <img class="illus-2" src="./images/illustration-2.svg" alt="" />
           </div>
-          <div class="section">
-            <h3 class="heading">Stay productive, wherever you are</h3>
-            <p class="content">
-              Never let location be an issue when accessing your files. Fylo has
-              you covered for all of your file storage needs.
-            </p>
-            <p class="content">
-              Securely share files and folders with friends, family and
-              colleagues for live collaboration. No email attachments required!
-            </p>
-            <p class="btn-neon">See how Fylo works</p>
-          </div>
-          <div class="quote">
-            <img src="./images/icon-quotes.svg" alt="" class="q-icon" />
-            <p class="content">
-              Fylo has improved our team productivity by an order of magnitude.
-              Since making the switch our team has become a well-oiled
-              collaboration machine.
-            </p>
-            <div class="user">
-              <img
-                src="./images/avatar-testimonial.jpg"
-                alt=""
-                class="avatar"
-              />
-              <p class="bio">
-                <span class="name">Kyle Burton</span>
-                <span class="pro">Founder & CEO, Huddle</span>
+          <div>
+            <div class="section middle-sec">
+              <h3 class="heading">Stay productive, wherever you are</h3>
+              <p class="content">
+                Never let location be an issue when accessing your files. Fylo
+                has you covered for all of your file storage needs.
               </p>
+              <p class="content">
+                Securely share files and folders with friends, family and
+                colleagues for live collaboration. No email attachments
+                required!
+              </p>
+              <p class="btn-neon">See how Fylo works</p>
+            </div>
+            <div class="quote">
+              <img src="./images/icon-quotes.svg" alt="" class="q-icon" />
+              <p class="content">
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="user">
+                <img
+                  src="./images/avatar-testimonial.jpg"
+                  alt=""
+                  class="avatar"
+                />
+                <p class="bio">
+                  <span class="name">Kyle Burton</span>
+                  <span class="pro">Founder & CEO, Huddle</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="sign-up">
-        <h3 class="heading">Get early access today</h3>
-        <p class="content">
-          It only takes a minute to sign up and our free starter tier is
-          extremely generous. If you have any questions, our support team would
-          be happy to help you.
-        </p>
+        <div>
+          <h3 class="heading">Get early access today</h3>
+          <p class="content">
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+        </div>
         <div class="input-btn">
           <input type="text" class="input" placeholder="email@example.com" />
-          <button class="btn">Get Started</button>
+          <button class="btn">Get Started For Free</button>
         </div>
       </section>
       <footer>
@@ -153,6 +168,8 @@
             <li>Press</li>
             <li>Blog</li>
           </div>
+        </section>
+        <section>
           <div class="contact">
             <li>Contact Us</li>
             <li>Terms</li>

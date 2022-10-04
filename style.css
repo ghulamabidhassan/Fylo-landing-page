@@ -128,7 +128,7 @@ li:hover {
 
 .middle {
   width: 100%;
-  background-color: var(--Light-Grayish-Blue);
+  /* background-color: var(--Light-Grayish-Blue); */
   padding: 0 1.5em;
 }
 
@@ -138,7 +138,19 @@ li:hover {
 
 .curve-mob {
   width: 100%;
-  margin-top: -2.5em;
+  margin-bottom: -1em;
+}
+
+.curve-desktop {
+  display: none;
+}
+
+.middle {
+  padding: 0;
+}
+
+.middle .sections {
+  background-color: var(--Light-Grayish-Blue);
 }
 
 .middle .section {
@@ -171,6 +183,7 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: auto;
 }
 
 .btn-neon::after {
@@ -273,6 +286,7 @@ footer .logo {
 
 footer .info p {
   margin: 0.7em 0;
+  width: fit-content;
 }
 
 footer .info p span {
@@ -298,6 +312,7 @@ footer section:nth-child(2) {
 footer section:nth-child(2) div li {
   margin: 0.9em 0;
   transition: 300ms ease-in-out;
+  width: fit-content;
 }
 
 footer section:nth-child(2) div li:hover {
@@ -332,4 +347,209 @@ footer .logo svg path {
 #social:hover {
   fill: var(--Moderate-Cyan);
   border: 0.5px solid var(--Moderate-Cyan);
+}
+
+input {
+  /* border: none; */
+  outline: none;
+}
+
+input:focus:invalid {
+  border: 2px solid red;
+  color: red;
+  transition: 500ms linear;
+}
+
+input:focus:valid {
+  border: 2px solid green;
+  color: green;
+  transition: 500ms linear;
+}
+
+.contact {
+  margin: 1em 0;
+  margin-left: 2.3em;
+}
+
+.contact li {
+  width: fit-content;
+}
+
+.contact li:hover {
+  color: var(--Moderate-Cyan);
+}
+
+.contact > * {
+  margin-bottom: 0.8em;
+}
+
+/* desktop 1366 px */
+@media screen and (min-width: 85.375em) {
+  header {
+    padding-bottom: 5em;
+  }
+
+  nav {
+    padding: 3em 5em 0 5em;
+  }
+
+  nav .logo {
+    height: 2.5em;
+  }
+
+  .menus > * {
+    margin: 0 0.5em;
+  }
+
+  .menus li {
+    font-size: 1.25em;
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 3em;
+  }
+
+  .section:nth-child(1) {
+    grid-column: 2/3;
+    padding-right: 2em;
+  }
+
+  .section:nth-child(1) img {
+    height: auto;
+  }
+
+  .section:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 8em 0 0;
+  }
+
+  .section:nth-child(2) .heading {
+    font-size: 2em;
+  }
+
+  .section:nth-child(2) .content {
+    margin-bottom: 1em;
+  }
+
+  .curve-mob {
+    display: none;
+  }
+
+  input {
+    all: unset;
+    font-size: 0.7em;
+    width: 80%;
+  }
+
+  .input[type="text"] {
+    text-align: left;
+  }
+
+  button {
+    all: unset;
+    font-size: 0.7em;
+    font-weight: 800;
+    text-align: center;
+    width: 40%;
+  }
+
+  .input-btn-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .input-btn-header input {
+    width: 65%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .input-btn-header button {
+    margin: 0 0 0 1.5em;
+    padding: 0;
+    height: fit-content;
+  }
+
+  .middle {
+    width: 100%;
+    padding: 0;
+  }
+
+  .curve-desktop {
+    display: block;
+    max-width: 100%;
+  }
+
+  .middle .sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .illus-two img {
+    scale: 0.9;
+  }
+
+  .middle-sec .heading {
+    font-size: 2em;
+  }
+
+  .middle-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .middle > .sections > .section:nth-child(1) {
+    /* background-color: yellow; */
+    padding: 9em 0 0 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .quote {
+    width: 60%;
+  }
+
+  .sign-up {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sign-up div {
+    margin: 0 4em;
+  }
+
+  .sign-up div:nth-child(1) {
+    text-align: left;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  body {
+    font-size: 1.5em;
+  }
+
+  .curve-desktop {
+    width: 100%;
+  }
 }
